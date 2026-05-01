@@ -1,4 +1,5 @@
 class CheckboxesPage {
+  
   get elements() {
     return {
       header: () => $("h3"),
