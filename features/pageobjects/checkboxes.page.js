@@ -2,7 +2,7 @@ class CheckboxesPage {
   get elements() {
     return {
       header: () => $("h3"),
-      checkbox: (num) => $(`input:nth-child(${num})`),
+      checkbox: (num) => $(`input[type="checkbox"]:nth-of-type(${num})`),
     };
   }
 

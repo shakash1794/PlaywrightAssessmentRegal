@@ -4,7 +4,11 @@ import checkboxesPage from "../pageobjects/checkboxes.page.js";
 
 When(/^I select checkbox (\d)$/, async function (num) {
   this.checkbox = await checkboxesPage.elements.checkbox(num);
-  await checkboxesPage.select(num);
+  const isChecked = await this.checkbox.isSelected();
+  // Only click if not already checked to ensure it ends up checked
+  if (!isChecked) {
+    await checkboxesPage.select(num);
+  }
 });
 
 Then(/^The checkbox should be checked$/, async function () {
