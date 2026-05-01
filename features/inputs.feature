@@ -1,3 +1,4 @@
+
 @INPUTS
 Feature: The Internet Guinea Pig Website
 
@@ -5,6 +6,7 @@ Feature: The Internet Guinea Pig Website
     Given I am on the inputs page
     When I enter "<num>"
     Then The input value should be the number I entered
+
 
     Examples:
       | num |
